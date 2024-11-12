@@ -25,9 +25,12 @@ class ExpenseTile extends StatelessWidget {
               Container(
                 height: 35,
                 width: 35,
-                decoration:
-                    BoxDecoration(shape: BoxShape.circle, color: Colors.grey),
-                child: Icon(LineIcons.pizzaSlice),
+                decoration: BoxDecoration(
+                    shape: BoxShape.circle, color: const Color(0xFF5F5E5E)),
+                child: Icon(
+                  LineIcons.pizzaSlice,
+                  color: kYellowColor,
+                ),
               ),
               SizedBox(
                 width: 10,
