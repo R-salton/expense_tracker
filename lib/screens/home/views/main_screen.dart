@@ -1,8 +1,13 @@
 import 'dart:math';
 
 import 'package:expense_tracker/components/constants.dart';
+import 'package:expense_tracker/components/transction_tile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:icon_craft/icon_craft.dart';
+import 'package:line_icons/line_icons.dart';
+import 'package:simple_icons/simple_icons.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
@@ -185,63 +190,25 @@ class MainScreen extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Column(
-              children: [
-                SizedBox(
-                  child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 10),
-                    height: 70,
-                    decoration: BoxDecoration(
-                      color: kBlackCleanColor,
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          Expanded(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: SizedBox(
+                height: 500,
+                child: ListView.builder(
+                  itemCount: 10,
+                  itemBuilder: (context, index) {
+                    return Column(
                       children: [
-                        Row(
-                          children: [
-                            Container(
-                              height: 50,
-                              width: 50,
-                              decoration: BoxDecoration(
-                                  shape: BoxShape.circle, color: Colors.grey),
-                              child: Icon(Icons.breakfast_dining_outlined),
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Text(
-                              "Food",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ],
+                        ExpenseTile(),
+                        SizedBox(
+                          height: 15,
                         ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "\$ 200",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            Text(
-                              "Today",
-                              style: TextStyle(color: Colors.white60),
-                            )
-                          ],
-                        )
                       ],
-                    ),
-                  ),
-                )
-              ],
+                    );
+                  },
+                ),
+              ),
             ),
           )
         ],
