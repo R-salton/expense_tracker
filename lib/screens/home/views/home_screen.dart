@@ -1,4 +1,3 @@
-import 'dart:math';
 
 import 'package:expense_tracker/components/constants.dart';
 import 'package:expense_tracker/screens/home/views/main_screen.dart';

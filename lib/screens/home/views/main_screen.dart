@@ -1,4 +1,7 @@
+import 'dart:math';
+
 import 'package:expense_tracker/components/constants.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatelessWidget {
@@ -10,7 +13,7 @@ class MainScreen extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            height: 150,
+            height: 100,
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             decoration: BoxDecoration(
               color: kIconColor,
@@ -152,6 +155,91 @@ class MainScreen extends StatelessWidget {
                       color: const Color(0xFFAD3C34),
                     )
                   ],
+                )
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 25,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Transactions",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  "View All",
+                  style: TextStyle(
+                      color: Colors.white54, fontWeight: FontWeight.w500),
+                )
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: Column(
+              children: [
+                SizedBox(
+                  child: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    height: 70,
+                    decoration: BoxDecoration(
+                      color: kBlackCleanColor,
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Container(
+                              height: 50,
+                              width: 50,
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.circle, color: Colors.grey),
+                              child: Icon(Icons.breakfast_dining_outlined),
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Text(
+                              "Food",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "\$ 200",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            Text(
+                              "Today",
+                              style: TextStyle(color: Colors.white60),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
                 )
               ],
             ),
