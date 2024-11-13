@@ -1,15 +1,9 @@
-import 'dart:math';
 
 import 'package:expense_tracker/components/constants.dart';
 import 'package:expense_tracker/components/transction_tile.dart';
 import 'package:expense_tracker/data/data.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:icon_craft/icon_craft.dart';
-import 'package:line_icons/line_icon.dart';
 import 'package:line_icons/line_icons.dart';
-import 'package:simple_icons/simple_icons.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
