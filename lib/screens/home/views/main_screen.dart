@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:expense_tracker/components/constants.dart';
 import 'package:expense_tracker/components/transction_tile.dart';
+import 'package:expense_tracker/data/data.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -205,11 +206,17 @@ class MainScreen extends StatelessWidget {
               child: SizedBox(
                 height: 500,
                 child: ListView.builder(
-                  itemCount: 10,
+                  itemCount: transactions.length,
                   itemBuilder: (context, index) {
                     return Column(
                       children: [
-                        ExpenseTile(),
+                        ExpenseTile(
+                          title: transactions[index]["Name"],
+                          amount: transactions[index]["Amount"],
+                          day: transactions[index]["Date"],
+                          icon: transactions[index]["icon"],
+                          color: transactions[index]["color"],
+                        ),
                         SizedBox(
                           height: 15,
                         ),
