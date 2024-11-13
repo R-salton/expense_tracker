@@ -177,11 +177,7 @@ class _StatScreeState extends State<StatScree> {
                   SizedBox(
                     height: 10,
                   ),
-                  SizedBox(
-                    height: 450,
-                    width: double.infinity,
-                    child: MyChart(),
-                  )
+                  Expanded(child: MyChart())
                 ],
               ),
             ),
