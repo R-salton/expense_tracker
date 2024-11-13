@@ -103,13 +103,12 @@ class MainScreen extends StatelessWidget {
                     width: 35,
                     height: 35,
                     decoration: BoxDecoration(
-                      color: Colors.grey.shade300,
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Icon(
                       Icons.settings,
-                      color: kTextColor,
-                      size: 20,
+                      color: Colors.white,
+                      size: 24,
                     ))
               ],
             ),

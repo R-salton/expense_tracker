@@ -1,12 +1,18 @@
-
 import 'package:expense_tracker/components/constants.dart';
 import 'package:expense_tracker/screens/home/views/main_screen.dart';
+import 'package:expense_tracker/screens/stats_screen/stats_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  var ScreenIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,6 +27,12 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
         child: BottomNavigationBar(
+            onTap: (value) {
+              setState(() {
+                ScreenIndex = value;
+              });
+            },
+            currentIndex: ScreenIndex,
             backgroundColor: kLightBlueColor,
             iconSize: 25,
             type: BottomNavigationBarType.fixed,
@@ -50,7 +62,7 @@ class HomeScreen extends StatelessWidget {
               )),
           onPressed: () {}),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      body: MainScreen(),
+      body: ScreenIndex == 0 ? MainScreen() : StatScree(),
     );
   }
 }
