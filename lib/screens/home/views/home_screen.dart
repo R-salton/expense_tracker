@@ -1,4 +1,5 @@
 import 'package:expense_tracker/components/constants.dart';
+import 'package:expense_tracker/screens/add_expense/views/add_expenses.dart';
 import 'package:expense_tracker/screens/home/views/main_screen.dart';
 import 'package:expense_tracker/screens/stats_screen/stats_screen.dart';
 import 'package:flutter/cupertino.dart';
@@ -60,7 +61,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 Icons.add,
                 color: kTextColor,
               )),
-          onPressed: () {}),
+          onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => AddExpensesScreen()));
+          }),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: ScreenIndex == 0 ? MainScreen() : StatScree(),
     );

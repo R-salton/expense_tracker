@@ -1,4 +1,3 @@
-import 'dart:math';
 
 import 'package:expense_tracker/components/constants.dart';
 import 'package:fl_chart/fl_chart.dart';
@@ -125,7 +124,7 @@ class _MyChartState extends State<MyChart> {
       case 4:
         text = text = "05";
       case 5:
-        text = text = "06";
+        text = text = "06"; 
       case 6:
         text = text = "07";
       case 7:
