@@ -16,7 +16,9 @@ class MyAppView extends StatelessWidget {
             onSurface: Colors.black,
             primary: Color(0xFFe7f3ff),
             secondary: Color(0xFF205fa1),
-            tertiary: Color(0xFF82bbf6)),
+            tertiary: Color(0xFF82bbf6),
+            
+            ),
       ),
       home: HomeScreen(),
     );
