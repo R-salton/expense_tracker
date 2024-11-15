@@ -27,10 +27,10 @@ class _AddExpensesScreenState extends State<AddExpensesScreen> {
   @override
   Widget build(BuildContext context) {
     final List<String> categories = [
-      'Groceries',
-      'Bills',
+      'Food',
+      'Shopping',
       'Entertainment',
-      'Transport',
+      'Travel',
       'Health',
       'Others',
     ];
@@ -93,6 +93,11 @@ class _AddExpensesScreenState extends State<AddExpensesScreen> {
                     height: 30,
                   ),
                   DropdownButtonFormField<String>(
+                    icon: FaIcon(
+                      FontAwesomeIcons.plus,
+                      color: kBlackCleanColor,
+                      size: 18,
+                    ),
                     value: selectedCategory,
                     onChanged: (value) {
                       setState(() {
